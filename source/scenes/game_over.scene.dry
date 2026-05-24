@@ -168,7 +168,13 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
 
   const sortedParties = filteredPartySupport.sort((a, b) => b[1] - a[1]);
 
+  const thelargestparty = sortedParties[0]?.[0] ?? null;
+
   const secondLargestParty = sortedParties[1]?.[0] ?? null;
+
+  if (thelargestparty === 'lvp') {
+    Q.the_largest_party = 'lvp';
+  }
 
   if (secondLargestParty === 'dnvp') {
     Q.second_largest_party = 'dnvp';
@@ -352,14 +358,8 @@ if ((Q.dynamic_mode || Q.historical_mode || Q.difficulty == 1) && !((Q.year == 1
   if (Q.lvp_r == 0 && Q.lvp_formed) {
     this.achieve('lindner_moribund');
   }
-
-  const LargestParty = sortedParties[0]?.[0] ?? null;
-
-  if (LargestParty === 'LVP') {
-    Q.largest_party = 'LVP';
-  }
-  if (Q.largest_party == "LVP") {
-      this.achieve('tausendjahrige_libreich');
+  if (Q.the_largest_party == 'lvp') {
+    this.achieve('tausendjahrige_libreich');
   }
 }
 this.achieve('game_completed');
