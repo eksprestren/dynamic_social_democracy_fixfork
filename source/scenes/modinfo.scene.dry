@@ -408,6 +408,14 @@ elements.forEach(el => {
 
 [? if not snoopy: - Other bug fixes. ?]
 
+**V1.06 - 2026/5/24**
+
+[? if not snoopy: - New achievements: "Der Rote Justiz", "Brüning der Rotfrontkämpfer", "Merz und Scholz", "Lindner Moribund" and "Tausendjährige Libreich". ?]
+
+[? if not snoopy: - Added Saxony Landtag Election in 1933. ?]
+
+[? if not snoopy: - Other bug fixes. ?]
+
 = Future Plans
 
 I'm currently working on another mod, *La Via Chilena al Socialismo*. Updates will resume once that's finished.
